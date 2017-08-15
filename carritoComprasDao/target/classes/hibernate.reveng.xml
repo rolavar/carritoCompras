@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-catalog="carrito" match-name="categoria" />
+	<table-filter match-catalog="carrito" match-name="estado_envio" />
+	<table-filter match-catalog="carrito" match-name="estado_producto" />
+	<table-filter match-catalog="carrito" match-name="pedido_producto" />
+	<table-filter match-catalog="carrito" match-name="producto" />
+	<table-filter match-catalog="carrito" match-name="usuario" />
+	<table-filter match-catalog="carrito" match-name="venta" />
+	<table catalog="carrito" name="categoria">
+		<column name="id"></column>
+		<column name="nombre"></column>
+	</table>
+	<table catalog="carrito" name="estado_envio">
+		<column name="id"></column>
+		<column name="nombre"></column>
+	</table>
+	<table catalog="carrito" name="estado_producto">
+		<column name="id"></column>
+		<column name="nombre"></column>
+	</table>
+	<table catalog="carrito" name="pedido_producto">
+		<column name="id"></column>
+		<column name="idProducto"></column>
+		<column name="idEstado"></column>
+		<column name="valorVenta"></column>
+		<column name="cantidadPedido"></column>
+		<column name="idUsuario"></column>
+	</table>
+	<table catalog="carrito" name="producto">
+		<column name="id"></column>
+		<column name="stock"></column>
+		<column name="descripcion"></column>
+		<column name="nombre"></column>
+		<column name="valor"></column>
+		<column name="idcategoria"></column>
+	</table>
+	<table catalog="carrito" name="usuario">
+		<column name="id"></column>
+		<column name="mail"></column>
+		<column name="password"></column>
+		<column name="user"></column>
+		<column name="nombre"></column>
+		<column name="apellido1"></column>
+		<column name="apellido2"></column>
+		<column name="rut"></column>
+		<column name="telefono"></column>
+		<column name="direccion"></column>
+	</table>
+	<table catalog="carrito" name="venta">
+		<column name="id"></column>
+		<column name="idPedido"></column>
+		<column name="idCompra"></column>
+	</table>
+</hibernate-reverse-engineering>
